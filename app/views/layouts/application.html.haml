@@ -10,4 +10,12 @@
     = stylesheet_link_tag "application", "data-turbo-track": "reload"
     = javascript_importmap_tags
   %body
-    = yield
+    %nav
+      - if current_user.present?
+        = button_to "Sign Out", sign_out_path, method: :delete, data: {turbo: false}
+      - else
+        = button_to "Twitch Sign In", '/auth/twitch', method: :post, data: {turbo: false}
+        - unless Rails.env.production?
+          = button_to "Developer Sign In", '/auth/developer', method: :post, data: {turbo: false}
+    %main
+      = yield

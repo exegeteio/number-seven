@@ -1,24 +1,16 @@
-# README
+# Number Seven
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Twitch overlay app build using Rails 7.  Personal project, not for general consumption.
 
-Things you may want to cover:
+## Setup
 
-* Ruby version
+Install Rails 7, `bundle install` in the local directory.  Requires Redis.
 
-* System dependencies
+Copy `.env-sample` to `.env` and fill out the required Twitch credentials. 
 
-* Configuration
+## TODO
 
-* Database creation
+  - Dockerize
+  - Use Comfy.js to read chat from Twitch chat for the logged in user.
+  - Use Turbo to load chat in real time to overlay screen.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
